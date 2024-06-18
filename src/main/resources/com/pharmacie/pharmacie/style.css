@@ -1,0 +1,25 @@
+.body{
+    -fx-background-color: #defdea;
+}
+.navtoadd{
+    -fx-background-color: linear-gradient(to right top, rgb(0, 255, 157), rgb(13, 225, 240));
+}
+.shadow{
+    -fx-effect: dropshadow(gaussian, rgba(61, 63, 63, 0.1), 20, 0, 0, 3);
+}
+.vert{
+    -fx-background-color: rgb(0, 255, 157);
+}
+
+.tableau .column-header{
+    -fx-background-color: #ffffff;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(61, 63, 63, 0.1), 0, 0, 0, 3);
+}
+.tableau .column-header .label{
+    -fx-text-fill: #9aa09f;
+}
+.boutton{
+    -fx-background-color: rgb(3, 175, 255);
+
+}

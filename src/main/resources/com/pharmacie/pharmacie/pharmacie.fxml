@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="1291.0" styleClass="body" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.pharmacie.Controller">
+   <children>
+      <VBox fx:id="navig" prefHeight="400.0" prefWidth="63.0" styleClass="navtoadd" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox prefHeight="442.0" prefWidth="63.0" styleClass="navtoadd" stylesheets="@style.css">
+               <children>
+                  <Pane fx:id="panehome" prefHeight="75.0" prefWidth="63.0">
+                     <children>
+                        <ImageView fx:id="home" fitHeight="40.0" fitWidth="35.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#homeClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/fenetre-de-la-maison(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane fx:id="panestock" prefHeight="75.0" prefWidth="63.0">
+                     <children>
+                        <ImageView fx:id="stockage" fitHeight="40.0" fitWidth="40.0" layoutX="12.0" layoutY="10.0" onMouseClicked="#stockageClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/fournisseur-alternatif.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneachat" prefHeight="75.0" prefWidth="63.0">
+                     <children>
+                        <ImageView fx:id="achat" fitHeight="40.0" fitWidth="40.0" layoutX="12.0" layoutY="13.0" onMouseClicked="#achatClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/panier-dachat-rapide.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="panehisto" prefHeight="75.0" prefWidth="63.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#histoClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/graphique-histogramme.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneinfo" prefHeight="75.0" prefWidth="63.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/commentaire-info.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="vert" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="quitter" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#quitterClicked" onMouseEntered="#quitterHover" onMouseExited="#quitterSortieHover" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/partir.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox fx:id="navtete" layoutX="-3.0" prefHeight="51.0" prefWidth="266.0" style="-fx-background-color: white;" styleClass="shadow" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/kit-medical.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="12.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <HBox alignment="TOP_RIGHT" prefHeight="51.0" prefWidth="110.0" HBox.hgrow="ALWAYS">
+               <HBox prefHeight="36.0" prefWidth="1080.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label prefHeight="36.0" prefWidth="411.0" text="GESTION  DE  PHARMACIE" textFill="#06aba8">
+                        <font>
+                           <Font name="System Bold" size="22.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+                  <HBox.margin>
+                     <Insets left="50.0" />
+                  </HBox.margin>
+               </HBox>
+               <ImageView fx:id="btnMinimize" fitHeight="13.0" fitWidth="18.0" onMouseClicked="#minimizeWindow" pickOnBounds="true" preserveRatio="true" translateY="2.0">
+                  <image>
+                     <Image url="@img/moins.png" />
+                  </image>
+                  <HBox.margin>
+                     <Insets right="15.0" />
+                  </HBox.margin>
+               </ImageView>
+               <ImageView fx:id="btnMaximize" fitHeight="19.0" fitWidth="49.0" onMouseClicked="#maximizeRestoreWindow" pickOnBounds="true" preserveRatio="true" translateY="-3.0">
+                  <image>
+                     <Image url="@img/icons/sort_window_24px.png" />
+                  </image>
+                  <HBox.margin>
+                     <Insets right="15.0" />
+                  </HBox.margin>
+               </ImageView>
+               <ImageView fx:id="btnClose" onMouseClicked="#closeWindow" fitHeight="14.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/traverser.png" />
+                  </image>
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin>
+               </ImageView>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+      <Label layoutX="104.0" layoutY="51.0" prefHeight="40.0" prefWidth="348.0" styleClass="shadow" stylesheets="@style.css" text="MEDOCS" textFill="#078c7d" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="51.0" fx:id="xtext">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="104.0" layoutY="91.0" prefHeight="2.0" prefWidth="127.0" style="-fx-border-color: #078c7d; -fx-border-width: 0 0 2 0;" AnchorPane.topAnchor="85.0" fx:id="xline" />
+      <ImageView fx:id="btnajoutmedoc" fitHeight="30.0" fitWidth="30.0" layoutX="1240.0" layoutY="60.0" onMouseClicked="#medocajoutClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="60.0">
+         <image>
+            <Image url="@img/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnajoutstock" fitHeight="30.0" fitWidth="30.0" layoutX="1240.0" layoutY="60.0" onMouseClicked="#stockajoutClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="60.0">
+         <image>
+            <Image url="@img/plus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnajoutachat" fitHeight="30.0" fitWidth="30.0" layoutX="1236.0" layoutY="60.0" onMouseClicked="#achatajoutClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+         <image>
+            <Image url="@img/panierm.png" />
+         </image>
+      </ImageView>
+      <GridPane AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="95.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="892.0" minWidth="10.0" prefWidth="809.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="374.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane fx:id="parentstack" prefHeight="311.0" prefWidth="537.0">
+               <children>
+                  <GridPane prefHeight="311.0" prefWidth="537.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/medecin.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="60.0" opacity="0.13" pickOnBounds="true" preserveRatio="true" rotate="55.3">
+                                 <image>
+                                    <Image url="@img/flacon-dordonnance.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" rotate="-66.8">
+                                 <image>
+                                    <Image url="@img/gelules.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" opacity="0.14" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/seringue.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <StackPane fx:id="StackpaneTableau" prefHeight="347.0" prefWidth="612.0">
+                           <children>
+                              <fx:include fx:id="medoctableau" source="medoc.fxml" />
+                              <fx:include fx:id="achattableau" source="achat.fxml" />
+                              <fx:include fx:id="stocktableau" source="stock.fxml" />
+                              <fx:include fx:id="histotableau" source="histogram.fxml" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </StackPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </StackPane>
+            <StackPane fx:id="stackAjout" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-radius: 8; -fx-border-color: #00928b; -fx-border-width: 0;" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="100.0" left="10.0" />
+               </GridPane.margin>
+               <children>
+                  <fx:include fx:id="modifStock" source="StockModif.fxml" />
+                  <fx:include fx:id="modifAchat" source="AchatModif.fxml" />
+                  <fx:include fx:id="modifMedoc" source="AjoutModif.fxml" />
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

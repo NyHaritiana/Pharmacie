@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: transparent;" styleClass="body" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacie.pharmacie.controller.tab.EntreeController">
+   <children>
+      <TableView fx:id="entreeTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" styleClass="tableau" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="numEntreeColumn" prefWidth="75.0" style="-fx-background-color: transparent;" text="N°Stock" />
+          <TableColumn fx:id="numMedocColumn" prefWidth="75.0" style="-fx-background-color: transparent;" text="N°Medoc" />
+            <TableColumn fx:id="nombreEntreeColumn" prefWidth="75.0" style="-fx-background-color: transparent;" text="Entrée" />
+            <TableColumn fx:id="dateEntreeColumn" prefWidth="75.0" style="-fx-background-color: transparent;" text="Date" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
